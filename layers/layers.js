@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:32749").setExtent([669265.522630, 9113731.735317, 691314.757116, 9127258.873039]);
+//ol.proj.get("EPSG:32749").setExtent([672373.946152, 9111289.805143, 694423.180639, 9124816.942865]);
 var wms_layers = [];
 
 
@@ -26,7 +26,7 @@ var lyr_bataskecamatan_1 = new ol.layer.Vector({
                 source:jsonSource_bataskecamatan_1, 
                 style: style_bataskecamatan_1,
                 popuplayertitle: "bataskecamatan",
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/bataskecamatan_1.png" /> bataskecamatan'
             });
 var format_Export_2 = new ol.format.GeoJSON();
@@ -41,7 +41,7 @@ var lyr_Export_2 = new ol.layer.Vector({
                 source:jsonSource_Export_2, 
                 style: style_Export_2,
                 popuplayertitle: "Export",
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/Export_2.png" /> Export'
             });
 var format_Jalan_3 = new ol.format.GeoJSON();
@@ -56,7 +56,7 @@ var lyr_Jalan_3 = new ol.layer.Vector({
                 source:jsonSource_Jalan_3, 
                 style: style_Jalan_3,
                 popuplayertitle: "Jalan",
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/Jalan_3.png" /> Jalan'
             });
 var format_point_4 = new ol.format.GeoJSON();
@@ -88,7 +88,7 @@ lyr_point_4.set('fieldImages', {'X': 'TextEdit', 'Y': 'TextEdit', 'Nama': 'TextE
 lyr_bataskecamatan_1.set('fieldLabels', {'OBJECTID': 'no label', 'WADMKC': 'no label', 'Shape_Leng': 'no label', 'Shape_Area': 'no label', 'Luasan_Ha': 'no label', 'Nilai': 'no label', 'bobot_kp': 'no label', 'tb_kp': 'no label', 'jumlah_SM': 'no label', 'nilai_sm': 'no label', 'bobot_sm': 'no label', 'tb_sm': 'no label', 'total': 'no label', 'kelas': 'no label', 'NAMA1': 'no label', 'ID': 'no label', 'Lembar': 'no label', 'Skala': 'no label', 'HEHEHEHE': 'no label', 'FID_1': 'no label', 'LUASAR': 'no label', 'JMLHPEN': 'no label', 'KPDTNPEN': 'no label', });
 lyr_Export_2.set('fieldLabels', {'OBJECTID': 'no label', 'WADMKC': 'no label', 'Shape_Leng': 'no label', 'Shape_Area': 'no label', 'Luasan_Ha': 'no label', 'Nilai': 'no label', 'bobot_kp': 'no label', 'tb_kp': 'no label', 'jumlah_SM': 'no label', 'nilai_sm': 'no label', 'bobot_sm': 'no label', 'tb_sm': 'no label', 'total': 'no label', 'kelas': 'no label', 'NAMA1': 'no label', 'ID': 'no label', 'Lembar': 'no label', 'Skala': 'no label', 'HEHEHEHE': 'no label', });
 lyr_Jalan_3.set('fieldLabels', {'NAMRJL': 'no label', 'KONRJL': 'no label', 'MATRJL': 'no label', 'FGSRJL': 'no label', 'UTKRJL': 'no label', 'TOLRJL': 'no label', 'WLYRJL': 'no label', 'AUTRJL': 'no label', 'KLSRJL': 'no label', 'SPCRJL': 'no label', 'JPARJL': 'no label', 'ARHRJL': 'no label', 'STARJL': 'no label', 'KLLRJL': 'no label', 'MEDRJL': 'no label', 'LOCRJL': 'no label', 'JARRJL': 'no label', 'FCODE': 'no label', 'REMARK': 'no label', 'SRS_ID': 'no label', 'LCODE': 'no label', 'METADATA': 'no label', 'SHAPE_Leng': 'no label', });
-lyr_point_4.set('fieldLabels', {'X': 'no label', 'Y': 'no label', 'Nama': 'header label - always visible', 'Jalan': 'header label - always visible', 'Kelurahan': 'header label - always visible', 'Kecamatan': 'header label - always visible', 'Kota': 'header label - always visible', 'Provinsi_k': 'header label - always visible', });
+lyr_point_4.set('fieldLabels', {'X': 'no label', 'Y': 'no label', 'Nama': 'header label - always visible', 'Jalan': 'header label - visible with data', 'Kelurahan': 'header label - always visible', 'Kecamatan': 'header label - always visible', 'Kota': 'header label - always visible', 'Provinsi_k': 'header label - always visible', });
 lyr_point_4.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
